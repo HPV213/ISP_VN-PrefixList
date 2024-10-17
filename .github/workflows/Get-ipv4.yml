@@ -14,6 +14,10 @@ jobs:
         shell: bash
         run : |
           bash getip.sh
+      - name: Update ip prefix-list
+        shell: bash
+        run: | 
+          bash prefix-list.sh
       - name: push updated lists
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
